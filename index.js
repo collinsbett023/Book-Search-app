@@ -14,13 +14,15 @@ function addToReadingList(img,title){
     console.log(img,title)
     ul.classList.add('list')
     nav.appendChild(ul)
-    li.classList.add('list-item')
-    li.innerHTML += `
-        <img src="${img}" alt="" srcset="">
-        <p>${title}</p>
-     `
+    // li.classList.add('list-item')
+    // li.innerHTML += `
+    //     <img src="${img}" alt="" srcset="">
+    //     <p>${title}</p>
+    //  `
     console.log(li)
-    document.querySelector('.list').appendChild(li)
+    document.querySelector('.list').insertAdjacentHTML('beforeend',`<li class= "list-item"> <img src="${img}" alt="" srcset="">
+    <p>${title}</p></li>`)
+    //document.querySelector('.list').appendChild(li)
     
    
     
