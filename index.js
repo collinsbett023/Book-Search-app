@@ -31,7 +31,7 @@ function addToReadingList(img,title){
 
 submitBtn.addEventListener('click', () => {
     const value = searchInput.value
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&key=AIzaSyCTJGcStF9z0N0m92jKe9AErERjBOJcZZo`
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&filter=ebooks&orderBy=relevance&key=AIzaSyCTJGcStF9z0N0m92jKe9AErERjBOJcZZo`
 
     fetch(url)
     .then((res) => res.json())
