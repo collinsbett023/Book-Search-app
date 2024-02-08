@@ -94,6 +94,6 @@ toggleBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () =>{
 
    div.innerHTML = `
-    <h1 class="search-book">Click Search Bar</h1>
+    <h1 class="search-book">Search A Book</h1>
    ` 
 })

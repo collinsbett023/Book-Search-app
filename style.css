@@ -154,18 +154,23 @@ body{
 .list li{
   display: flex;
   justify-content: center;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   padding: 2rem;
   flex-direction: column;
   /* width: 100%; */
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   line-height: 1.5rem;
   transition: .5s;
 }
 
 .list-item img{
-  height: 14rem;
+  height: 12rem;
   max-width: 10rem;
+}
+
+.list-item p{
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
 }
 
 .list li:hover{
