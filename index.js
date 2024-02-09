@@ -24,6 +24,7 @@ function addToReadingList(img,title){
 submitBtn.addEventListener('click', () => {
     const value = searchInput.value
     const API_KEY = 'AIzaSyCTJGcStF9z0N0m92jKe9AErERjBOJcZZo'
+    //Added sorting and print type parameters to google api
     const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&orderBy=relevance&printType=all&key=${API_KEY}`
 
     fetch(url)
