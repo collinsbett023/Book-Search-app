@@ -26,7 +26,7 @@ You need to have installed
 3. Run the `index.html` in the browser using live server.
 
 ## Screenshot
-![Alt text]([Screenshot from 2024-02-09 11-08-52.png] "Optional Title")
+![Alt text]([[Screenshot from 2024-02-09 11-08-52.png](https://drive.google.com/file/d/11nfpmKV8dgOHvjcPBHNxUWCEqczOS-FF/view?usp=sharing)] "Optional Title")
 
 ## Author
 The repo is maintained by:
