@@ -14,6 +14,7 @@ This web application has been built using:
 You need to have installed 
 1. VS Code
 2. NodeJS v10.18
+3. No need for generating another api key.The one used has no restrictions.
 
 ### Steps
 1. Clone the repository:
@@ -23,6 +24,9 @@ You need to have installed
 2. Open the project file in VS Code
 
 3. Run the `index.html` in the browser using live server.
+
+## Screenshot
+![Alt text](Screenshot from 2024-02-09 11-08-52.png "Optional Title")
 
 ## Author
 The repo is maintained by:
