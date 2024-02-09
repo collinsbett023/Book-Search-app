@@ -8,27 +8,19 @@ const div = document.getElementById('books')
 const ul = document.createElement('ul')
 const li = document.createElement('li')
 
-
+//adds books that have been selected to the to be read list
 function addToReadingList(img,title){
     // console.log(bookData)
     console.log(img,title)
     ul.classList.add('list')
     nav.appendChild(ul)
-    // li.classList.add('list-item')
-    // li.innerHTML += `
-    //     <img src="${img}" alt="" srcset="">
-    //     <p>${title}</p>
-    //  `
     console.log(li)
     document.querySelector('.list').insertAdjacentHTML('beforeend',`<li class= "list-item"> <img src="${img}" alt="" srcset="">
-    <p>${title}</p></li>`)
-    //document.querySelector('.list').appendChild(li)
-    
-   
-    
+    <p>${title}</p>   <div><button class="btn-remove" onclick = "removeBook()">Remove</button></div></li>`)
+  
 }
 
-
+//Fetch data from google book api and creates cards to display data on web page
 submitBtn.addEventListener('click', () => {
     const value = searchInput.value
     const API_KEY = 'AIzaSyCTJGcStF9z0N0m92jKe9AErERjBOJcZZo'
@@ -39,22 +31,10 @@ submitBtn.addEventListener('click', () => {
     .then((data) => {
         //data.items = array consisting of 10 objects
         console.log(data['items'])
-       
-
-        
-
-
 
         div.innerHTML = ``
 
-       
-        
         for(key in data['items']){
-            // container = document.createElement('div')
-            // container.innerHTML = `
-            // <img src="${data['items'][key]['volumeInfo']['imageLinks'].thumbnail}" alt="" srcset="">
-            // <h2>${data['items'][key]['volumeInfo'].title}</h2>
-            // <p>${data['items'][key]['volumeInfo'].description}</p> ` 
             
             let container = document.createElement('article')
             container.classList.add('book-card')
@@ -68,23 +48,18 @@ submitBtn.addEventListener('click', () => {
                     <p>${data['items'][key]['volumeInfo'].description}</p>
                     <p class="author"><span class="author-span">Author: ${data['items'][key]['volumeInfo'].authors.toString()}</span> </p>
 
-                
-                </div>
+                    </div>
 
-                <div class= "btn-div"><button class="btn" onclick = "addToReadingList('${data['items'][key]['volumeInfo']['imageLinks'].thumbnail}','${data['items'][key]['volumeInfo']['title']}')">Add to Reading List</button></div>
+                    <div class= "btn-div"><button class="btn" onclick = "addToReadingList('${data['items'][key]['volumeInfo']['imageLinks'].thumbnail}','${data['items'][key]['volumeInfo']['title']}')">Add to Reading List</button></div>
             
                 ` 
-            
-            // console.log(data['items'][key]['volumeInfo'].authors.toString())
             div.appendChild(container)
        }  
-       
-       
-      
+          
 })
 })
 
-
+//Toogle button event listener for the sidebar menu
 toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('active')
     logo.classList.toggle('logo-active')
@@ -92,9 +67,16 @@ toggleBtn.addEventListener('click', () => {
     document.querySelector('.list').classList.toggle('list-active')
 })
 
+//Event Listener when web page loads
 document.addEventListener('DOMContentLoaded', () =>{
 
    div.innerHTML = `
     <h1 class="search-book">Search A Book</h1>
    ` 
 })
+
+//Remove book from reading list
+function removeBook(){
+    document.querySelector('.list-item').remove()
+    alert("Book has been removed")
+}
