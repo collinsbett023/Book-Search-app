@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 //Remove book from reading list
 function removeBook(){
-    alert("Book has been removed")
     document.querySelector('.list-item').remove()
-    
+    alert("Book has been removed") 
 }

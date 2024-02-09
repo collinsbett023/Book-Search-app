@@ -249,7 +249,6 @@ body{
 
 .book-card:hover {
   box-shadow: 10px 15px 16px 0 rgba(0,0,0,0.2);
-  max-width: 30.25%;
 }
 
 .book-image{
@@ -283,7 +282,20 @@ body{
   padding: .5rem 1rem;
   border-radius: 5px;
   color: #fff;
+  transition: .5s;
 }
  .btn:hover{
+  background-color: rgba(18, 10, 2, 0.924);
+ }
+
+ .btn-remove{
+    border: none;
+    background-color: rgba(186, 97, 20, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    transition: .5s;
+ }
+
+ .btn-remove:hover{
   background-color: rgba(18, 10, 2, 0.924);
  }
